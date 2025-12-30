@@ -1,0 +1,1067 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ========== NAVBAR ========== */
+/* Navbar Base */
+.navbar {
+  padding: 15px 20px;
+  background: #141414;
+  border-bottom: 1px solid #222;
+}
+
+.navbar h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.navbar span {
+  color: #e50914;
+}
+
+/* Navbar untuk Home Page */
+.navbar-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 15px;
+}
+
+.navbar-left h1 {
+  font-size: 28px;
+  cursor: pointer;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.navbar-right {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+  margin-left: 0;
+}
+
+/* Navbar untuk Search Page */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-search h1 {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  position: absolute;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+}
+
+/* ========== SEARCH BOX ========== */
+/* Search Box untuk Home Page */
+.search-form-home {
+  width: 100%;
+}
+
+.search-box-home {
+  display: flex;
+  align-items: center;
+  background: #1c1c1c;
+  border-radius: 8px;
+  padding: 12px 20px;
+  border: 2px solid #2a2a2a;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.search-box-home:focus-within {
+  border-color: #e50914;
+  background: #141414;
+}
+
+.search-icon-home {
+  color: #888;
+  margin-right: 12px;
+  font-size: 22px;
+}
+
+.search-input-home {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  padding: 5px 0;
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+.search-input-home::placeholder {
+  color: #888;
+  font-size: 14px;
+}
+
+.search-input-home[type="search"] {
+  -webkit-appearance: none;
+}
+
+.search-input-home::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Search Box untuk Search Page */
+.search-box-search {
+  display: flex;
+  align-items: center;
+  background: #1c1c1c;
+  border-radius: 10px;
+  padding: 0 20px;
+  border: 2px solid #2a2a2a;
+  transition: border-color 0.3s;
+}
+
+.search-box-search:focus-within {
+  border-color: #e50914;
+}
+
+.search-icon {
+  color: #666;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 18px 0;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #666 !important;
+  opacity: 1;
+}
+
+.search-clear {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-clear:hover {
+  color: white;
+}
+
+/* ========== CONTENT ========== */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+/* ========== CHECKBOX STYLE ========== */
+.checkbox-area {
+  background: #1c1c1c;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 20px 0 30px;
+  border: 1px solid #2a2a2a;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  accent-color: #e50914;
+}
+
+.checkbox-wrapper label {
+  color: #aaa;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ========== DRAMA LIST & CARD ========== */
+.drama-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  overflow-x: visible;
+  padding: 10px 0;
+}
+
+.card {
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #2a2a2a;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #e50914;
+  box-shadow: 0 10px 20px rgba(229, 9, 20, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.card p {
+  font-size: 14px;
+  padding: 12px;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Exclusive Tag */
+.exclusive-tag {
+  display: inline-block;
+  background: #e50914;
+  color: white;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+/* ========== EPISODE ========== */
+.episode-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.episode {
+  padding: 10px;
+  background: #1c1c1c;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.episode:hover {
+  background: #2a2a2a;
+}
+
+/* ========== VIDEO PLAYER ========== */
+.player-container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+video {
+  width: 100%;
+  background: #000;
+  border-radius: 6px;
+}
+
+/* ========== EPISODE NAVIGATION ========== */
+.episode-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.nav-button {
+  padding: 10px 15px;
+  background: #e50914;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s;
+  min-width: 150px;
+}
+
+.nav-button:hover:not(:disabled) {
+  background: #ff0a16;
+  transform: translateY(-2px);
+}
+
+.nav-button:disabled {
+  background: #333;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.episode-info {
+  text-align: center;
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.episode-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.episode-number {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.episode-list-link {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.back-to-list {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #2c3e50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.back-to-list:hover {
+  background: #34495e;
+  transform: translateY(-2px);
+}
+
+.episode-nav-container {
+  max-width: 800px;
+  margin: 20px auto 0;
+}
+
+/* ========== SEARCH PAGE ========== */
+.search-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.search-section {
+  margin: 25px 0;
+  position: relative;
+}
+
+/* Search Suggestions */
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #1c1c1c;
+  border-radius: 0 0 10px 10px;
+  margin-top: -2px;
+  border: 2px solid #2a2a2a;
+  border-top: none;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+  display: none;
+}
+
+.search-suggestions.show {
+  display: block;
+}
+
+.suggestion-item {
+  padding: 15px 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  transition: background 0.2s;
+  border-bottom: 1px solid #2a2a2a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: #2a2a2a;
+}
+
+.suggestion-item.highlight {
+  background: #2a2a2a;
+}
+
+/* ========== LOADING & NO RESULTS ========== */
+.loading,
+.loading-state {
+  text-align: center;
+  padding: 40px 20px;
+  display: none;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #2a2a2a;
+  border-top-color: #e50914;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-state p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 50px 20px;
+  color: #666;
+  display: none;
+}
+
+.no-results h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.no-results p {
+  font-size: 14px;
+}
+
+/* ========== RESULTS SECTION ========== */
+.results-section {
+  margin: 30px 0;
+}
+
+.results-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.results-title:before {
+  content: "search";
+  font-family: 'Material Symbols Outlined';
+  font-size: 24px;
+  color: #e50914;
+}
+
+/* ========== SIMILAR SECTION ========== */
+.similar-section {
+  margin: 50px 0;
+  padding-top: 30px;
+  border-top: 1px solid #2a2a2a;
+}
+
+.similar-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.similar-title:before {
+  content: "movie";
+  font-family: 'Material Symbols Outlined';
+  font-size: 24px;
+  color: #e50914;
+}
+
+/* ========== DRAMA GRID ========== */
+.drama-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.drama-grid .card {
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.drama-grid .card:hover {
+  transform: translateY(-5px);
+}
+
+.drama-grid .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.drama-grid .card p {
+  padding: 12px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: white;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ========== MATERIAL ICONS ========== */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+/* Episode Navigation Responsive */
+@media (max-width: 768px) {
+  .episode-navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-button {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .episode-info {
+    order: -1;
+    padding: 10px 0;
+  }
+  
+  /* Drama Grid Responsive */
+  .drama-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 15px;
+  }
+  
+  .drama-grid .card img {
+    height: 170px;
+  }
+  
+  .search-input {
+    padding: 15px 0;
+    font-size: 14px;
+  }
+  
+  /* Home Page Responsive */
+  .navbar-home {
+    padding: 15px 10px;
+  }
+  
+  .navbar-left h1 {
+    font-size: 24px;
+  }
+  
+  .drama-list {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+  
+  .card img {
+    height: 190px;
+  }
+}
+
+@media (max-width: 480px) {
+  .drama-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .drama-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .search-box-search {
+    padding: 0 15px;
+  }
+  
+  .navbar-left h1 {
+    font-size: 22px;
+  }
+  
+  .search-input-home {
+    font-size: 14px;
+  }
+  
+  .card img {
+    height: 170px;
+  }
+  
+  .card p {
+    font-size: 13px;
+    padding: 10px;
+  }
+  
+  main {
+    padding: 15px;
+  }
+}
+
+/* ========== DRAMA DETAIL PAGE ========== */
+.drama-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.drama-header {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.drama-poster {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.drama-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.drama-info h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.drama-genre {
+  display: inline-block;
+  background: #e50914;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.play-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.play-button:hover {
+  background: #ff0a16;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3);
+}
+
+.play-button .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.drama-synopsis {
+  background: #1c1c1c;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  border: 1px solid #2a2a2a;
+}
+
+.drama-synopsis h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.drama-synopsis p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ========== EPISODE LIST SECTION ========== */
+.episode-list-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.episode-list-section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.episode-item {
+  background: #1c1c1c;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #2a2a2a;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.episode-item:hover {
+  border-color: #e50914;
+  background: #2a2a2a;
+  transform: translateY(-3px);
+}
+
+.episode-number {
+  width: 36px;
+  height: 36px;
+  background: #e50914;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.episode-title {
+  flex: 1;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.no-episodes {
+  text-align: center;
+  padding: 40px;
+  color: #888;
+  font-size: 16px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .drama-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .drama-poster {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+  
+  .drama-info h1 {
+    font-size: 26px;
+  }
+
+@media (max-width: 480px) {
+  .drama-details {
+    padding: 15px;
+  }
+
+  .episode-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .episode-title {
+    text-align: center;
+    margin-top: 8px;
+  }
+}
+
+/* ========== EPISODE GRID CLEAN ========== */
+.episode-grid-clean {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.episode-item-clean {
+  background: #1c1c1c;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 15px 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+}
+
+.episode-item-clean:hover {
+  background: #2a2a2a;
+  border-color: #e50914;
+  transform: translateY(-2px);
+}
+
+.episode-number-clean {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+.episode-item-clean.current {
+  background: rgba(229, 9, 20, 0.2);
+  border-color: #e50914;
+}
+
+/* Episode title (hidden but available for hover/tooltip) */
+.episode-title-clean {
+  display: none;
+}
+
+/* Episode pagination */
+.episode-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  background: #2a2a2a;
+  border: 1px solid #333;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  min-width: 40px;
+  text-align: center;
+}
+
+.page-btn:hover {
+  background: #3a3a3a;
+  border-color: #444;
+}
+
+.page-btn.active {
+  background: #e50914;
+  border-color: #e50914;
+}
+
+.page-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-btn.disabled:hover {
+  background: #2a2a2a;
+  border-color: #333;
+}
+
+/* Episode header */
+.episode-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.episode-count {
+  background: #e50914;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Loading episodes */
+.episodes-loading {
+  text-align: center;
+  padding: 40px;
+  color: #888;
+  font-size: 16px;
+}
+
+.episodes-loading .spinner {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 15px;
+}
+
+/* Episode grid responsive */
+@media (max-width: 768px) {
+  .episode-grid-clean {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  
+  .episode-item-clean {
+    padding: 12px 5px;
+    min-height: 50px;
+  }
+  
+  .episode-number-clean {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .episode-grid-clean {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .episode-item-clean {
+    min-height: 45px;
+  }
+  
+  .episode-number-clean {
+    font-size: 15px;
+  }
+}
+
+/* Minimal Footer */
+.minimal-footer {
+  background: #141414;
+  border-top: 1px solid #222;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.minimal-footer p {
+  color: #aaa;
+  font-size: 14px;
+  margin: 0;
+}
+
+.minimal-footer a {
+  color: #e50914;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.minimal-footer a:hover {
+  text-decoration: underline;
+}

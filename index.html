@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WatchDracin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+</head>
+<body>
+  <!-- Header dengan search box -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <h1><span>Watch</span>Dracin</h1>
+      </div>
+      <div class="navbar-right">
+        <!-- Search Form -->
+        <form id="searchForm" class="search-form-home">
+          <div class="search-box-home">
+            <span class="material-symbols-outlined search-icon-home">search</span>
+            <input 
+              type="search"
+              id="searchInputHome"
+              class="search-input-home"
+              placeholder="Cari drama..."
+              autocomplete="off"
+              enterkeyhint="search"
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Rekomendasi -->
+    <section>
+      <h2>Rekomendasi Untukmu</h2>
+      <div id="foryou" class="drama-list"></div>
+    </section>
+
+    <!-- 🆕 Rilis Terbaru -->
+    <section>
+      <h2>Rilis Terbaru</h2>
+      <div id="new" class="drama-list"></div>
+    </section>
+
+    <!-- ⭐ Ranking -->
+    <section>
+      <h2>Peringkat Populer</h2>
+      <div id="rank" class="drama-list"></div>
+    </section>
+  </main>
+  <!-- Minimal Footer -->
+<footer class="minimal-footer">
+  <p>
+    © <span id="current-year">2025</span> WatchDracin | 
+    Developed by <a href="https://instagram.com/zuraoc_" target="_blank">Fahmi Coenubia</a>
+  </p>
+</footer>
+  <script src="js/home.js"></script>
+</body>
+</html>
